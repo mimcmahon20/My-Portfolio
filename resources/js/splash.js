@@ -1,8 +1,16 @@
 const scrollItems = document.querySelectorAll('.scroll');
 const scrollContainer = document.querySelector('.scroll-container')
 const legend = document.querySelector('.legend');
+const arrow = document.querySelector('.arrow');
 
-let hasScrolled = false;
+console.log(window.innerHeight);
+console.log(window.innerWidth);
+
+if(window.innerWidth < window.innerHeight) {
+   scrollContainer.style = 'scroll-snap-type: none';
+   arrow.style.display = 'none';
+} else {
+  let hasScrolled = false;
 
 scrollContainer.addEventListener('scroll', function() {
   if (!hasScrolled) {
@@ -15,3 +23,6 @@ scrollContainer.addEventListener('scroll', function() {
     hasScrolled = true;
   }
 });
+}
+
+
