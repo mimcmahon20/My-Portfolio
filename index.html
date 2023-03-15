@@ -9,56 +9,73 @@
 </head>
 <body>
     <div class="scroll-container">
-
+        <header class="header">
+            <div class="header-text nameContainer">
+                <h1 class="name firstletter">M</h1>
+                <h1 class="name half">aguire&nbsp</h1>
+                <h1 class="name secondletter">M</h1>
+                <h1 class="name half">cMahon</h1>
+            </div>
+            <div class="nav">
+                <a href="#info" class="nav-link"><h2>About</h2></a>
+                <a href="#projects" class="nav-link"><h2>Projects</h2></a>
+                <a href="#contact" class="nav-link"><h2>Contact</h2></a>
+            </div>
+        </header>
     
-    <div class="legend scroll">
-        <h1 class="hi">Hi!</h1>
-        <img src="resources/arrow.svg" alt="arrow" class="arrow">
-    </div>
+        <div class="legend scroll">
+            <h1 class="hi">Hi!</h1>
+            <img src="resources/arrow.svg" alt="arrow" class="arrow">
+        </div>
 
-    <div class="info scroll">
-        <div class="section grid">
-            <h2 class="info-text-left">I am a website developer with an interest in <span class="gradient-ui">UI/UX</span> and front-end engineering</h2>
-            <div class="info-svg-right">
-                <img src="resources/computer.svg" alt="computer" class="computer">
-            </div>
-        </div>
-        <div class="section grid">
-            <div class="info-svg-left">
-                <img src="resources/team.svg" alt="team" class="team">
-            </div>
-            <h2 class="info-text-right">I believe in creating 
-                <span class="immersive">immersive experiences</span>
-                 focused on users' needs</h2>
-        </div>
-        <div class="section grid">
-            <h2 class="info-text-left">I have three years of web dev experience and currently am the Website Development Lead at 
-                <span class="ah-info">Appalachian Haven</span>
-            </h2>
-            <div class="view">
-                <div class="box">
-                    <div class="front"></div>
-                    <div class="back"></div>
-                    <div class="top"></div>
-                    <div class="bottom"></div>
-                    <div class="left"></div>
-                    <div class="right"></div>
+        <div class="info scroll" id="info">
+            <div class="section grid">
+                <h2 class="info-text-left">I am a website developer with an interest in <span class="gradient-ui">UI/UX</span> and front-end engineering</h2>
+                <div class="info-svg-right">
+                    <img src="resources/computer.svg" alt="computer" class="computer">
                 </div>
             </div>
-        </div>
-        <div class="section grid">
-            <div class="info-svg-left">
-                <img src="resources/virginia.svg" alt="virginia" class="virginia">
+
+            <div class="section grid">
+                <div class="info-svg-left">
+                    <img src="resources/team.svg" alt="team" class="team">
+                </div>
+                <h2 class="info-text-right">I believe in creating 
+                    <span class="immersive">immersive experiences</span>
+                        focused on users' needs</h2>
             </div>
-            <h2 class="info-text-right">I am in my third year at <span class="gradient-vt">Virginia Tech</span> studying Industrial and Systems Engineering along with Computer Science and Human-Computer Interaction</h2>
+
+            <div class="section grid">
+                <h2 class="info-text-left">I have three years of web dev experience and currently am the Website Development Lead at 
+                    <span class="ah-info">Appalachian Haven</span>
+                </h2>
+
+                <div class="view">
+                    <div class="box">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section grid">
+                <div class="info-svg-left">
+                    <img src="resources/virginia.svg" alt="virginia" class="virginia">
+                </div>
+                <h2 class="info-text-right">I am in my third year at <span class="gradient-vt">Virginia Tech</span> studying Industrial and Systems Engineering along with Computer Science and Human-Computer Interaction</h2>
+            </div>
+
         </div>
-    </div>
 
     <!-- make this a horizontal scroller-->
     <h1 class="projects-header">My Work and Past Projects</h1>
     <div class="projects">
         
-        <div class="project grid">
+        <div class="project grid" id="projects">
             <div class="project-text left-project">
                 <h2 class="project-header">Appalachian Haven</h2>
                 <p class="project-description">Appalachian Haven is a health and wellness startup located in Blacksburg, VA. I started work as a website maintenance intern in October 2022, and was promoted to <strong>Website Development Team Lead</strong> in January 2023. We work out of Wordpress, however my knowledge on HTML, CSS, and Javascript has proven crucial. I have learned about <strong>Wordpress, SEO, Google Analytics, Ecommerce, and UI/UX</strong> through my work with Appalachian Haven.</p>
@@ -66,9 +83,11 @@
             </div>
             <div class="right-project">
                 <div class="project-media-group">
-                    <div class="project-image-desktop ah">
+                    <div class="project-ah-container project-image-desktop">
+                        <div class="ah wiggle">
+                        </div>
                     </div>
-                    <div class="project-image-mobile ahmob">
+                    <div class="project-image-mobile ah-mobile">
                     </div>
                 </div>
             </div>
@@ -89,14 +108,14 @@
                 <h2 class="project-header">Appalachian Haven</h2>
                 <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui rerum cum velit veniam quis exercitationem nihil pariatur recusandae cupiditate, sapiente, similique laborum expedita esse, voluptates neque! Officia quaerat temporibus impedit.</p>
             </div>
-            <div class="right">
+            <div class="right">x
                 <div class="project-image-desktop"></div>
                 <div class="project-image-mobile" style="float: right"></div>
             </div>
         </div> -->
     </div>
 
-    <div class="contact">
+    <div class="contact lookOut" id="contact">
         <h1 class="contact-header">Want to find out more?</h1>
         <div class="outboundlinks">
             <h2 class="email">Feel free to email me at <span style="color: rgb(0, 115, 255)">mimcmahon20@vt.edu</span></h2>
@@ -108,9 +127,17 @@
             <a href="http://github.com/mimcmahon20" target="_blank" class="github"><button>GitHub</button></a>
         </div>
     </div>
+
+    <footer>
+        <div class="footer">
+            <h2 class="footer-text">Made with <span style="color: rgb(255, 0, 0)">❤</span> by Maguire McMahon</h2>
+            <h2 class="footer-text">Also HTML, CSS, Javascript, GitHub, and GitHub Pages!</h2>
+        </div>
+    </footer>
     </div>
 </body>
 
 <script src="resources/js/splash.js"></script>
+<script src="resources/js/headeranimation.js"></script>
 </html>
 
