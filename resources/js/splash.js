@@ -16,7 +16,8 @@ setTimeout(() => {
       setTimeout(() => {
           scrollItems[0].classList.remove('scroll');  
           scrollItems[1].classList.remove('scroll');
-          legend.style.display = 'none';
+          arrow.style.display = 'none';
+          legend.style.height = '0';
       }, 250)
       console.log('User has scrolled for the first time.');
       hasScrolled = true;
