@@ -18,7 +18,6 @@ body {
 /* Header */
 header {
     background: var(--secondary);
-    border-bottom: solid 10px var(--primary);
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -74,6 +73,7 @@ header h1 {
     width: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .legend {
@@ -84,6 +84,10 @@ header h1 {
     align-items: center;
     font-size: 5vw;
     transition: all .3s ease-in-out;
+    background: url("/resources/stacked-waves-haikei.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .arrow {
@@ -125,6 +129,12 @@ header h1 {
 }
 
 /* Info section*/
+.info {
+    background-color: var(--primary);
+    border-bottom: solid 10px var(--secondary);
+    padding-top: 200px;
+}
+
 .info h2 {
     font-size: 4vw;
 }
@@ -156,8 +166,7 @@ header h1 {
 
 
 /* Projects section*/
-.projects {
-}
+
 
 .project {
     padding: 60px 0;
@@ -165,7 +174,12 @@ header h1 {
 
 .projects-header {
     font-size: 10vw;
-    padding: 0 60px;
+    padding: 60px 60px;
+    background-image: url("/resources/blob-scatter-haikei.svg");
+    background-position: center center;
+    background-size: fit;
+    background-repeat: repeat-x;
+    background-color: var(--primary);
 }
 
 .project-text {
@@ -345,14 +359,16 @@ button:active:after {
 /* Extra section for gradients etc.*/
 .gradient-ui {
     background: -webkit-linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(9,9,121,1) 25%, rgba(0,212,255,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .gradient-vt {
     background: -webkit-linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(99,0,49,1) 25%, rgba(207,68,32,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .immersive {
@@ -362,8 +378,9 @@ button:active:after {
 
 .ah-info {
     background: -webkit-linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(0,182,21,1) 50%, rgba(69,252,81,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 

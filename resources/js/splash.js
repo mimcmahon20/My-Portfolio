@@ -2,6 +2,7 @@ const scrollItems = document.querySelectorAll('.scroll');
 const scrollContainer = document.querySelector('.scroll-container')
 const legend = document.querySelector('.legend');
 const arrow = document.querySelector('.arrow');
+const hi = document.querySelector('.hi');
 
 
 if(window.innerWidth < window.innerHeight) {
@@ -17,6 +18,7 @@ setTimeout(() => {
           scrollItems[0].classList.remove('scroll');  
           scrollItems[1].classList.remove('scroll');
           arrow.style.display = 'none';
+          hi.style.display = 'none';
           legend.style.height = '0';
       }, 250)
       console.log('User has scrolled for the first time.');
