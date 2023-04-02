@@ -96,6 +96,12 @@ header h1 {
     border: var(--primary) solid 2px;
 }
 
+.headshot-img:hover {
+    border: var(--cta) solid 2px;
+    scale: 1.1;
+    transform: translateY(5px);
+}
+
 
 /* Legend / Introduction on load*/
 
