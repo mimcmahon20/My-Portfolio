@@ -242,7 +242,7 @@ header h1 {
   .layer3 {
     background-image: url("/resources/layer3.svg");
     animation-name: move-background3;
-    animation-duration: 30s;
+    animation-duration: 90s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
