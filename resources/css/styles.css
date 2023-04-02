@@ -212,13 +212,36 @@ header h1 {
 }
 
 .projects-header {
+    text-align: center;
     font-size: 10vw;
     padding: 60px 60px;
-    background-image: url("/resources/blob-scatter-haikei.svg");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: repeat-x;
     background-color: var(--primary);
+    position: relative;
+}
+  
+.innerbackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("/resources/shapes2.svg");
+    background-position: center center;
+    background-repeat: repeat-x;
+    animation-name: move-background;
+    animation-duration: 55s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes move-background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
 }
 
 .project-text {
@@ -226,11 +249,6 @@ header h1 {
     align-items: center;
     flex-direction: column;
 }
-
-.project-header {
-    font-size: 6vw;
-}
-
 .project-description {
     font-size: 16px;
 }
