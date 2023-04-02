@@ -217,32 +217,52 @@ header h1 {
     padding: 60px 60px;
     background-color: var(--primary);
     position: relative;
-}
+  }
   
-.innerbackground {
+  .innerbackground {
     position: absolute;
     top: 0;
     left: 0;
     width: 300%;
     height: 100%;
     z-index: 1;
-    background-image: url("/resources/shapes2.svg");
     background-position: center center;
     background-repeat: repeat-x;
-    animation-name: move-background;
-    animation-duration: 55s;
+  }
+  
+  .layer1 {
+    background-image: url("/resources/layer1.svg");
+    animation-name: move-background1;
+    animation-duration: 100s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-}
+  }
   
-@keyframes move-background {
+  .layer3 {
+    background-image: url("/resources/layer3.svg");
+    animation-name: move-background3;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes move-background1 {
     from {
-        background-position: 0 0;
+      background-position: 0 0;
     }
     to {
-        background-position: -200% 0;
+      background-position: -200% 0;
     }
-}
+  }
+  
+  @keyframes move-background3 {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -600% 0;
+    }
+  }
 
 .project-text {
     display: flex;
