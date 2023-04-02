@@ -93,6 +93,7 @@ header h1 {
     height: 60px;
     border-radius: 50%;
     transition: all .3s linear;
+    border: var(--primary) solid 2px;
 }
 
 
