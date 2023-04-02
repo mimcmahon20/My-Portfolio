@@ -115,7 +115,7 @@ header h1 {
     align-items: center;
     font-size: 5vw;
     transition: all .3s ease-in-out;
-    background: url("/resources/stacked-waves-haikei.svg");
+    background: url("/resources/Cloudy.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -533,6 +533,9 @@ button:active:after {
 @media screen and (max-width: 500px) {
     * {
         --headersize: 24px;
+    }
+    .view {
+        --size: 60px;
     }
     .nameContainer {
         margin-left: 30px;

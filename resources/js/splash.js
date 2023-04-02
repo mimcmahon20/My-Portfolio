@@ -13,6 +13,9 @@ if(window.innerWidth < window.innerHeight) {
    scrollContainer.style = 'scroll-snap-type: none';
    arrow.style.position = 'sticky';
    arrow.style.float = 'bottom';
+   setTimeout(() => {
+    nameContainer.style.opacity = '1';
+   }, 250);
 } else {
   let hasScrolled = false;
 setTimeout(() => {
