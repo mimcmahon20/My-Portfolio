@@ -248,7 +248,7 @@ header h1 {
   .layer3 {
     background-image: url("/resources/layer3.svg");
     animation-name: move-background3;
-    animation-duration: 90s;
+    animation-duration: 190s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
@@ -542,20 +542,6 @@ button:active:after {
 
 @keyframes rotateView {
     to{ transform:  rotateY(360deg) }
-}
-
-/* wiggle and scale effects*/
-.wiggle {
-    animation: wiggle 1s ease-in-out infinite alternate;
-}
-
-@keyframes wiggle {
-    0% {
-        transform: scale(1) rotate(-1deg);
-    }
-    100% {
-        transform: scale(1.02) rotate(1deg);
-    }
 }
 
 /* media queries */
