@@ -2,16 +2,9 @@ const header = document.querySelector('.header');
 const lookOut = document.querySelector('.lookOut');
 const half = document.querySelectorAll('.half');
 const mSecond = document.querySelector('.secondletter');
-const nameContainer = document.querySelector('.nameContainer');
 const nav = document.querySelector('.nav');
 
-setTimeout(() => {
-    nameContainer.style.opacity = '1';
- }, 250);
 
-setTimeout(() => {
-    nav.style.opacity = '1'
-}, 250);
 
 const options = { 
     root: null,

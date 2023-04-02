@@ -53,6 +53,7 @@ header h1 {
     opacity: 0;
     transition: all .3s .3s linear;
     color: var(--primary);
+    opacity: 0;
 }
 
 .nav-link {
@@ -63,6 +64,35 @@ header h1 {
 
 .nav-link:hover {
     color: var(--cta);
+}
+
+.headshot {
+    position: absolute;
+    scale: 0.9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s .3s linear;
+}
+
+.rotateHead {
+    animation: rotateHead 2s;
+}
+
+@keyframes rotateHead {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.headshot-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all .3s linear;
 }
 
 
@@ -186,7 +216,7 @@ header h1 {
     padding: 60px 60px;
     background-image: url("/resources/blob-scatter-haikei.svg");
     background-position: center center;
-    background-size: fit;
+    background-size: cover;
     background-repeat: repeat-x;
     background-color: var(--primary);
 }
@@ -494,6 +524,9 @@ button:active:after {
     }
     .nav-link {
         font-size: 14px;
+    }
+    .headshot {
+        opacity: 0;
     }
 }
 
