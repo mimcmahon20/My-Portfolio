@@ -1,0 +1,49 @@
+:root {
+    --snakesize: 35px;
+}
+.game {
+    height: fit-content;
+    width: fit-content;
+    background-color: linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 30px;
+}
+
+
+.box {
+    height: var(--snakesize);
+    width: var(--snakesize);
+    background-color: #333333;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.snake {
+    background-color: green !important;
+}
+
+.snake-head {
+    background-color: blue !important;
+}
+
+.food {
+    background-color: red;
+}
+
+.wall {
+
+}
+
+@media screen and (max-width: 600px) {
+    .game {
+        width: 100%;
+        height: 100%;
+    }
+}

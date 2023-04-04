@@ -22,7 +22,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 10;
 }
@@ -37,7 +38,6 @@ header h1 {
     gap: 0px;
     margin-left: 60px;;
     padding: 0;
-    opacity: 0;
     transition: all .3s .3s linear;
 }
 
@@ -50,10 +50,8 @@ header h1 {
     gap: 20px;
     margin-right: 60px;
     padding: 0;
-    opacity: 0;
     transition: all .3s .3s linear;
     color: var(--primary);
-    opacity: 0;
 }
 
 .nav-link {
@@ -105,27 +103,25 @@ header h1 {
 
 /* Legend / Introduction on load*/
 
-.scroll-container {
-    height: 100vh;
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x:hidden;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
 
 .legend {
-    height: 100vh;
+    height: 90vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 5vw;
     transition: all .3s ease-in-out;
-    background: url("/resources/Cloudy.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    position: sticky;
+    top: 60px;
+    /* background-color: var(--secondary); */
+}
+
+.others {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary);
 }
 
 .hi {
@@ -133,7 +129,9 @@ header h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    opacity: .95;
     padding: 100px;
+    z-index: 2;
 }
 
 .arrow {
@@ -153,11 +151,6 @@ header h1 {
         transform: translateY(-12px);
     }
 }
-
-.scroll {
-    scroll-snap-align: start;
-}
-
 
 .section {
     text-align: center;
@@ -495,7 +488,7 @@ button:active:after {
     align-items: center;
 }
 
-.box {
+.cube {
     display: flex;
     justify-content: center;
     align-items: center;
