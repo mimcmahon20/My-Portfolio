@@ -12,9 +12,11 @@ console.log(`Viewport height: ${viewportHeight}`);
 
 let timer = 42;
 
+
 if(viewportWidth < 600) {
     timer = 126;
 }
+
 
 //setting up the grid
 class box {

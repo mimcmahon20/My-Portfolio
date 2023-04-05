@@ -50,9 +50,11 @@
             </div>
     
             <div class="others">
+                <div class="divider"></div>
                 <div class="info" id="info">
                     <div class="section grid">
-                        <h2 class="info-text-left">I am a website developer with an interest in <span class="gradient-ui">UI/UX</span> and front-end engineering</h2>
+                        <h2 class="info-text-left">I am a website developer with an interest in <span class="gradient-ui">UI/UX</span> and front-end engineering
+                        </h2>
                         <div class="info-svg-right">
                             <img src="resources/computer.svg" alt="computer" class="computer">
                         </div>
@@ -73,7 +75,7 @@
                             <span class="ah-info">Appalachian Haven</span>
                         </h2>
         
-                        <div class="view">
+                        <div class="view info-text-right">
                             <div class="cube">
                                 <div class="front"></div>
                                 <div class="back"></div>
@@ -93,88 +95,100 @@
                     </div>
         
                 </div>
-        
-            <!-- make this a horizontal scroller-->
-            <h1 class="projects-header" id="projects">
-                Work & Projects
-                <div class="innerbackground layer1"></div>
-                <div class="innerbackground layer3"></div>
-            </h1>
-            <div class="projects">
-                
-                <div class="project grid">
-                    <div class="project-text left-project">
-                        <h2 class="project-header">Appalachian Haven</h2>
-                        <p class="project-description">Appalachian Haven is a health and wellness startup located in Blacksburg, VA. I started work as a website maintenance intern in October 2022, and was promoted to <strong>Website Development Team Lead</strong> in January 2023. We work out of Wordpress, however my knowledge on HTML, CSS, and Javascript has proven crucial. I have learned about <strong>Wordpress, SEO, Google Analytics, Ecommerce, and UI/UX</strong> through my work with Appalachian Haven.</p>
-                        <a href="http://appalachianhaven.com" target="_blank"><button class="buttons">Visit now!</button></a>
-                    </div>
-                    <div class="right-project">
-                        <div class="project-media-group">
-                            <a class="project-container project-image-desktop" href="http://appalachianhaven.com" target="_blank">
-                                <div class="ah wiggle">
+
+                <div class="dividerproject"></div>
+
+                <h1 class="projects-header" id="projects">
+                    Work & Projects
+                </h1>
+                <div class="projects">
+                    <div class="project grid">
+                        <div class="project-text left-project">
+                            <h2 class="project-title">Appalachian Haven</h2>
+                            <div class="stack-container">
+                                <div class="wpsvg"></div>
+                                <div class="htmlsvg"></div>
+                                <div class="csssvg"></div>
+                            </div>
+
+                            <p class="project-description">Appalachian Haven is a health and wellness startup located in Blacksburg, VA. I started work as a website maintenance intern in October 2022, and was promoted to <strong>Website Development Team Lead</strong> in January 2023. We work out of Wordpress, however my knowledge on HTML, CSS, and Javascript has proven crucial. I have learned about <strong>Wordpress, SEO, Google Analytics, Ecommerce, and UI/UX</strong> through my work with Appalachian Haven.</p>
+                            <p class="project-description">Responsibilities included: Onboarding new interns, increasing mobile usability and experience, creating and maintaining weekly, monthly, and quarterly goals, using AI to help generate site content and increase traffic, user testing, emergency site maintenance, adding plugins, decreasing load time, and more.</p>
+                            <a href="http://appalachianhaven.com" target="_blank"><button class="buttons">Visit now!</button></a>
+                        </div>
+                        <div class="right-project">
+                            <div class="project-media-group">
+                                <a class="project-container project-image-desktop" href="http://appalachianhaven.com" target="_blank">
+                                    <div class="ah wiggle">
+                                    </div>
+                                </a>
+                                <div class="project-image-mobile ah-mobile">
                                 </div>
-                            </a>
-                            <div class="project-image-mobile ah-mobile">
                             </div>
                         </div>
                     </div>
-                </div>
-        
-                <div class="project grid" id="projects">
-                    <div class="left-project">
-                        <div class="project-media-group">
-                                <div class="project-container dijkstra">
-                                    <video autoplay="true" loop="true" src="./resources/djvideo.mp4"></video>
-                                </div>
-                                <div class="project-container snake">
-                                    <video autoplay="true" loop="true" src="./resources/snakevideo.mp4"></video>
-                                </div>
+            
+                    <div class="project grid" id="projects">
+                        <div class="left-project">
+                            <div class="project-media-group">
+                                    <div class="project-container dijkstra">
+                                        <video autoplay="true" loop="true" src="./resources/djvideo.mp4"></video>
+                                    </div>
+                                    <div class="project-container snake">
+                                        <video autoplay="true" loop="true" src="./resources/snakevideo.mp4"></video>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="project-text right-project">
+                            <h2 class="project-title">Snake & Dijkstra</h2>
+                            <div class="stack-container">
+                                <div class="htmlsvg"></div>
+                                <div class="csssvg"></div>
+                                <div class="jssvg"></div>
+                            </div>
+                            <p class="project-description">Creating the game Snake was the first CS project I ever completed back in 2018. I wrote it using Java and GUI's specifically JFrames. It took me a few months to figure out all the bugs. After learning about dijkstra's algorithm in my Deterministic Operations Research class, I was inspired to implement it into the game of Snake. I first created a visualization of the algorithm, then the game, then attempted to merge the two.</p>
+                            <p class="project-description">After many hours of trial and error, I finally was able to get the algorithm implemented smoothly into the game. Currently, the snake will live until either it traps itself, or food spawns at a point it can't see. This is the version you saw above!</p>
+                            <p class="project-description" style="text-align: center; color: rgba(92, 91, 91, 0.863);"><em>*Video of original snake from highschool in Resume.</em></p>
+                            <div class="outboundlinks snakelinks">
+                                <a href="https://mimcmahon20.github.io/dijkstras-visualization/" target="_blank"><button class="snakelink buttons">Visualization</button></a>
+                                <a href="https://mimcmahon20.github.io/snake/" target="_blank"><button class="snakelink buttons">Snake</button></a>
+                                <a href="https://github.com/mimcmahon20/snake" target="_blank"><button class="snakelink buttons">Source Code</button></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-text right-project">
-                        <h2 class="project-header">Snake & Dijkstra</h2>
-                        <p class="project-description">Creating the game Snake was the first CS project I ever completed back in 2018. I wrote it using Java and GUI's specifically JFrames. It took me a few months to figure out all the bugs. After learning about dijkstra's algorithm in my Deterministic Operations Research class, I was inspired to implement it into the game of Snake. I first created a visualization of the algorithm, then the game, then attempted to merge the two.</p>
-                        <p class="project-description">*Video of original snake in Resume.</p>
-                        <div class="outboundlinks snakelinks">
-                            <a href="https://mimcmahon20.github.io/dijkstras-visualization/" target="_blank"><button class="snakelink buttons">Visualization</button></a>
-                            <a href="https://mimcmahon20.github.io/snake/" target="_blank"><button class="snakelink buttons">Snake</button></a>
+            
+            
+                    <!-- <div class="project grid">
+                        <div class="project-text left">
+                            <h2 class="project-header">Appalachian Haven</h2>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui rerum cum velit veniam quis exercitationem nihil pariatur recusandae cupiditate, sapiente, similique laborum expedita esse, voluptates neque! Officia quaerat temporibus impedit.</p>
                         </div>
+                        <div class="right">x
+                            <div class="project-image-desktop"></div>
+                            <div class="project-image-mobile" style="float: right"></div>
+                        </div>
+                    </div> -->
+                </div>
+            
+                <div class="contact lookOut" id="contact">
+                    <h1 class="contact-header">Want to find out more?</h1>
+                    <div class="outboundlinks">
+                        <h2 class="email">Feel free to email me at <span style="color: rgb(0, 115, 255)">mimcmahon20@vt.edu</span></h2>
+                        <h2 class="phone">or call/text at <span style="color: rgb(0, 115, 255)">757-749-7551</span></h2>
+                    </div>
+                    <div class="grid">
+                        <a href="http://linkedin.com/in/maguire-mcmahon" target="_blank" class="linked"><button class="buttons">LinkedIn</button></a>
+                        <a href="https://docs.google.com/document/d/11AT2ASO3BLljY9GCj5ToH2JpKHkwZlYfumNWe4sU8L8/edit?usp=sharing" target="_blank" class="resume"><button class="buttons">Resume</button></a>
+                        <a href="http://github.com/mimcmahon20" target="_blank" class="github"><button class="buttons">GitHub</button></a>
                     </div>
                 </div>
-        
-        
-                <!-- <div class="project grid">
-                    <div class="project-text left">
-                        <h2 class="project-header">Appalachian Haven</h2>
-                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui rerum cum velit veniam quis exercitationem nihil pariatur recusandae cupiditate, sapiente, similique laborum expedita esse, voluptates neque! Officia quaerat temporibus impedit.</p>
+            
+                <footer>
+                    <div class="footer">
+                        <h2 class="footer-text">Made with <span style="color: rgb(255, 0, 0)">❤</span> by Maguire McMahon</h2>
+                        <h2 class="footer-text">Also HTML, CSS, Javascript, GitHub, and GitHub Pages!</h2>
                     </div>
-                    <div class="right">x
-                        <div class="project-image-desktop"></div>
-                        <div class="project-image-mobile" style="float: right"></div>
-                    </div>
-                </div> -->
-            </div>
-        
-            <div class="contact lookOut" id="contact">
-                <h1 class="contact-header">Want to find out more?</h1>
-                <div class="outboundlinks">
-                    <h2 class="email">Feel free to email me at <span style="color: rgb(0, 115, 255)">mimcmahon20@vt.edu</span></h2>
-                    <h2 class="phone">or call/text at <span style="color: rgb(0, 115, 255)">757-749-7551</span></h2>
+                </footer>
                 </div>
-                <div class="grid">
-                    <a href="http://linkedin.com/in/maguire-mcmahon" target="_blank" class="linked"><button class="buttons">LinkedIn</button></a>
-                    <a href="https://docs.google.com/document/d/11AT2ASO3BLljY9GCj5ToH2JpKHkwZlYfumNWe4sU8L8/edit?usp=sharing" target="_blank" class="resume"><button class="buttons">Resume</button></a>
-                    <a href="http://github.com/mimcmahon20" target="_blank" class="github"><button class="buttons">GitHub</button></a>
-                </div>
-            </div>
-        
-            <footer>
-                <div class="footer">
-                    <h2 class="footer-text">Made with <span style="color: rgb(255, 0, 0)">❤</span> by Maguire McMahon</h2>
-                    <h2 class="footer-text">Also HTML, CSS, Javascript, GitHub, and GitHub Pages!</h2>
-                </div>
-            </footer>
-            </div>
         </div>
 </body>
 
@@ -182,6 +196,7 @@
 <script src="resources/js/immersive.js"></script>
 <script src="resources/js/headeranimation.js"></script>
 <script src="resources/js/snakescript.js" type="module"></script>
+<script src="resources/js/slideIn.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQY14FGLQB"></script>
 <script>

@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -88,8 +89,8 @@ header h1 {
 }
 
 .headshot-img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     transition: all .3s linear;
     border: var(--primary) solid 2px;
@@ -98,6 +99,7 @@ header h1 {
 
 .headshot-img:hover {
     border: var(--cta) solid 2px;
+    scale: 1.25;
 }
 
 
@@ -172,10 +174,18 @@ header h1 {
     margin: 0 60px;
 }
 
+/* Divider */
+.divider {
+    width: 100%;
+    height: 150px;
+    background: url(/resources/waves.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
 /* Info section*/
 .info {
-    background-color: var(--primary);
-    border-bottom: solid 10px var(--secondary);
     padding-top: 200px;
 }
 
@@ -185,6 +195,7 @@ header h1 {
 
 .info-text-left {
     grid-column: 1 / span 5;
+    position: relative;
 }
 
 .info-svg-right {
@@ -206,8 +217,39 @@ header h1 {
     width: 70%;
 }
 
+.info-text-right, .info-svg-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.info-text-left, .info-svg-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.slide-in-left {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-in-right {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
 
 
+/* divider */
+.dividerproject {
+    width: 100%;
+    aspect-ratio: 5/1;
+    background: url(/resources/wavedivider.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
 
 /* Projects section*/
 
@@ -219,55 +261,59 @@ header h1 {
 .projects-header {
     text-align: center;
     font-size: 10vw;
-    padding: 60px 60px;
+    padding: 60px 30px;
+    margin-top: 0;
     background-color: var(--primary);
-    position: relative;
-  }
-  
-  .innerbackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300%;
-    height: 100%;
-    z-index: 1;
+    background-image: linear-gradient(to left, var(--primary), var(--secondary));
+    background-size: calc(10vw * 8) 5px;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+}
+
+.project-title {
+    width: 100%;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.htmlsvg {
+    width: 50px;
+    height: 50px;
+    background: url("/resources/htmlsymbol.svg");
+}
+
+.csssvg {
+    width: 50px;
+    height: 50px;
+    background: url("/resources/csssymbol.svg");
+}
+
+.jssvg {
+    width: 50px;
+    height: 50px;
+    background: url("/resources/jssymbol.svg");
+}
+
+.wpsvg{
+    width: 50px;
+    height: 50px;
+    background: url("/resources/wordpress.svg");
+}
+
+.htmlsvg, .csssvg, .jssvg, .wpsvg {
+    background-repeat: no-repeat;
     background-position: center center;
-    background-repeat: repeat-x;
-  }
-  
-  .layer1 {
-    background-image: url("/resources/layer1.svg");
-    animation-name: move-background1;
-    animation-duration: 100s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-  
-  .layer3 {
-    background-image: url("/resources/layer3.svg");
-    animation-name: move-background3;
-    animation-duration: 190s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-  
-  @keyframes move-background1 {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: -200% 0;
-    }
-  }
-  
-  @keyframes move-background3 {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: -600% 0;
-    }
-  }
+    background-size: cover;
+}
 
 .project-text {
     display: flex;
@@ -275,7 +321,7 @@ header h1 {
     flex-direction: column;
 }
 .project-description {
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .left-project {
@@ -331,6 +377,10 @@ header h1 {
 
 .snakelink {
     margin: 10px;
+}
+
+.snakelinks {
+    flex-direction: row !important;
 }
 
 /* Contact section*/
@@ -542,6 +592,11 @@ header h1 {
     to{ transform:  rotateY(360deg) }
 }
 
+
+
+
+  
+
 /* media queries */
 @media screen and (max-width: 768px) {
     .view {
@@ -563,6 +618,7 @@ header h1 {
     .section {
         padding: 50px 0;
     }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -589,5 +645,8 @@ header h1 {
     }
     .section {
         padding: 35px 0;
+    }
+    .snakelinks {
+        flex-direction: column !important;
     }
 }
