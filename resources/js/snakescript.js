@@ -12,6 +12,10 @@ console.log(`Viewport height: ${viewportHeight}`);
 
 let timer = 42;
 
+if(viewportWidth < 600) {
+    timer = 126;
+}
+
 //setting up the grid
 class box {
     constructor() {
@@ -194,24 +198,35 @@ let snakey = new snake();
 let foody = new food();
 
 
-let interval = setInterval(runner, timer, snakey);
+let interval = setInterval(() => {
+    if(!pause) {
+        runner(snakey);
+    }
+}, timer, snakey);
+let pause = false;
 
 let intervalClearer = setInterval(function() {
-    if(!snakey.alive) {
-        clearInterval(interval);
-        for(let i = 0; i < rows.length; i++) {
-            for(let j = 0; j < rows[i].boxes.length; j++) {
-                rows[i].boxes[j].box.classList.remove("snake", "snake-head", "food");
+        if(!snakey.alive) {
+            clearInterval(interval);
+            for(let i = 0; i < rows.length; i++) {
+                for(let j = 0; j < rows[i].boxes.length; j++) {
+                    rows[i].boxes[j].box.classList.remove("snake", "snake-head", "food");
+                }
             }
+            snakey = new snake();
+            foody = new food();
+            console.log('reset');
+            interval = setInterval(runner, timer, snakey);
         }
-        snakey = new snake();
-        foody = new food();
-        console.log('reset');
-        interval = setInterval(runner, timer, snakey);
-    }}
-,25);
+},25);
 
-intervalClearer;
+window.addEventListener('scroll', function() {
+    if (document.documentElement.scrollTop >= window.innerHeight) {
+        pause = true;
+    } else {
+        pause = false;
+    }
+  });
 
 //MAIN FUNCTION
 function runner(snakey) {
