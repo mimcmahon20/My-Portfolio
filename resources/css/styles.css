@@ -332,6 +332,10 @@ header h1 {
     font-size: 48px;
     margin-bottom: 20px;
     text-align: center;
+    background: -webkit-linear-gradient(9deg, rgb(47, 0, 255) 0%, rgb(76, 45, 255) 41%, rgb(204, 0, 255) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .stack-container {
@@ -379,8 +383,8 @@ header h1 {
     border-radius: 5%;
     box-shadow:  20px 20px 60px #7a7a7a,
              -20px -20px 60px #ffffff;
-    background-color: white;
-    background-image: linear-gradient(to right, white, #d6d3d3);
+    background-color: rgb(29, 29, 29);
+    background-image: linear-gradient(to right, rgb(255, 255, 255), #bdbdbd);
 }
 
 .project-description {
@@ -486,11 +490,11 @@ header h1 {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 60px;
+    padding-top: 160px;
 }
 
 .footer-header {
-    font-size: 5vw;
+    font-size: 8vw;
 }
 
 
@@ -597,6 +601,7 @@ header h1 {
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
     grid-column: 8;
     align-items: center;
+    z-index: 25;
 }
 
 .cube {
@@ -715,5 +720,19 @@ header h1 {
     }
     .project-title {
         padding-top: 50px;
+    }
+    .projects {
+        width: 75%;
+        height: 400vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .view {
+        --size: 50px;
+    }
+    .projects {
+        width: 65%;
+        height: 500vh;
     }
 }
