@@ -112,7 +112,7 @@ header h1 {
     transition: all .3s ease-in-out;
     position: sticky;
     top: 60px;
-    /* background-color: var(--secondary); */
+    background-color: var(--secondary);
 }
 
 .others {
@@ -381,9 +381,9 @@ header h1 {
 }
 
 
-/*button styles*/
+/*.buttons styles*/
 
-button {
+.buttons {
   appearance: none;
   backface-visibility: hidden;
   background-color: var(--cta);
@@ -415,7 +415,7 @@ button {
   white-space: nowrap;
 }
 
-button:hover {
+.buttons:hover {
   background-color: #1366d6;
   box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
   opacity: 1;
@@ -423,22 +423,22 @@ button:hover {
   transition-duration: .35s;
 }
 
-button:hover:after {
+.buttons:hover:after {
   opacity: .5;
 }
 
-button:active {
+.buttons:active {
   box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
   transform: translateY(2px);
   transition-duration: .35s;
 }
 
-button:active:after {
+.buttons:active:after {
   opacity: 1;
 }
 
 @media (min-width: 768px) {
-  button {
+  .buttons {
     padding: 14px 22px;
     width: 176px;
   }

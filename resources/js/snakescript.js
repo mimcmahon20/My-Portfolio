@@ -198,12 +198,27 @@ let snakey = new snake();
 let foody = new food();
 
 
+let pause = false;
+let pauseButton = document.getElementById("pause");
+let userPause = false;
+
+pauseButton.addEventListener("click", function() {
+    if(pause) {
+        pause = false;
+        userPause = false;
+        pauseButton.style.backgroundImage = 'url(/resources/blobpause.svg)';
+    } else {
+        pause = true;
+        userPause = true;
+        pauseButton.style.backgroundImage = 'url(/resources/blobplay.svg)';
+    }
+});
+
 let interval = setInterval(() => {
     if(!pause) {
         runner(snakey);
     }
 }, timer, snakey);
-let pause = false;
 
 let intervalClearer = setInterval(function() {
         if(!snakey.alive) {
@@ -223,8 +238,10 @@ let intervalClearer = setInterval(function() {
 window.addEventListener('scroll', function() {
     if (document.documentElement.scrollTop >= window.innerHeight) {
         pause = true;
-    } else {
+        pauseButton.style.backgroundImage = 'url(/resources/blobplay.svg)';
+    } else if(!userPause){
         pause = false;
+        pauseButton.style.backgroundImage = 'url(/resources/blobpause.svg)';
     }
   });
 

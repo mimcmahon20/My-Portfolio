@@ -13,6 +13,20 @@
     margin-top: 30px;
 }
 
+.pause {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background: url(/resources/blobpause.svg);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
 
 .box {
     height: var(--snakesize);
@@ -37,9 +51,6 @@
     background-color: red;
 }
 
-.wall {
-
-}
 
 @media screen and (max-width: 600px) {
     .game {
