@@ -24,11 +24,12 @@ setTimeout(() => {
 
 setTimeout(() => {
     arrowTimer.style.opacity = '1';
+    hi.style.scale = '1';
 },1000);
 
 setTimeout(() => {
     hi.style.opacity = '0.95';
-    hi.style.scale = '1';
+    hi.style.scale = '1.1';
 }, 500);
 
 appear = () => {
