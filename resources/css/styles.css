@@ -253,9 +253,10 @@ header h1 {
 
 /* Projects section*/
 
-
-.project {
-    padding: 60px 0;
+.projects {
+    width: 92%;
+    height: 100vh;
+    padding: 100px 0;
 }
 
 .projects-header {
@@ -269,6 +270,63 @@ header h1 {
     background-repeat: no-repeat;
     background-position: 50% 80%;
 }
+
+.card-container {
+    position: relative;
+    perspective: 8000px;
+    width: 100%;
+    height: 100%;
+}
+
+.card-container:nth-child(odd) {
+    grid-column: 1 / span 4;
+}
+
+.card-container:nth-child(even) {
+    grid-column: 6 / span 4;
+}
+
+.project {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.project-back {
+    transform: rotateY(180deg);
+}
+
+.project-front, .project-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.rotate {
+    background: url("/resources/rotate.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.rotate:hover {
+    scale: 1.1;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
 
 .project-title {
     width: 100%;
@@ -315,11 +373,10 @@ header h1 {
     background-size: cover;
 }
 
-.project-text {
+.project-text, .project-media-group {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
     border-radius: 5%;
     box-shadow:  20px 20px 60px #7a7a7a,
              -20px -20px 60px #ffffff;
@@ -327,17 +384,9 @@ header h1 {
     background-image: linear-gradient(to right, white, #d6d3d3);
 }
 
-
 .project-description {
     font-size: 24px;
-}
-
-.left-project {
-    grid-column: 1 / span 4;
-}
-
-.right-project {
-    grid-column: 6 / span 4;
+    padding: 20px;
 }
 
 .project-media-group {
@@ -345,12 +394,12 @@ header h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .project-container {
     width: 100%;
-    margin: 50px;
 }
 
 .ah,
@@ -604,15 +653,20 @@ header h1 {
 
 
   
+@media screen and (max-width: 1300px) {
+    .card-container {
+        grid-column: 1 / span 9 !important;
+    }
+    .projects {
+        height: 300vh;
+    }
+}
+
 
 /* media queries */
 @media screen and (max-width: 768px) {
     .view {
         --size: 125px;
-    }
-    .left-project,
-    .right-project {
-        grid-column: 1 / span 9;
     }
     .nav-link {
         font-size: 14px;
@@ -625,6 +679,9 @@ header h1 {
     }
     .section {
         padding: 50px 0;
+    }
+    .projects {
+        width: 85%;
     }
 
 }
@@ -656,5 +713,8 @@ header h1 {
     }
     .snakelinks {
         flex-direction: column !important;
+    }
+    .project-title {
+        padding-top: 50px;
     }
 }
