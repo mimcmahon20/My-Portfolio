@@ -444,7 +444,9 @@ header h1 {
 }
 
 /* Contact section*/
-.contact { 
+.contact {
+    padding: 25px;
+    padding-top: 200px; 
     height: fit-content;
 }
 
@@ -490,7 +492,7 @@ header h1 {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding-top: 160px;
+    padding: 100px;
 }
 
 .footer-header {
