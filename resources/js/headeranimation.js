@@ -4,7 +4,9 @@ const half = document.querySelectorAll('.half');
 const mSecond = document.querySelector('.secondletter');
 const nav = document.querySelector('.nav');
 const nameContainer = document.querySelector('.nameContainer');
-
+const headshot = document.querySelector('.headshot');
+let arrowTimer = document.querySelector('.arrow');
+let hi = document.querySelector('.hi');
 
 const options = { 
     root: null,
@@ -17,7 +19,17 @@ let active = false;
 setTimeout(() => {
     nameContainer.style.opacity = '1';
     nav.style.opacity = '1';
-}, 400);
+    headshot.style.opacity = '1';
+}, 1500);
+
+setTimeout(() => {
+    arrowTimer.style.opacity = '1';
+},1000);
+
+setTimeout(() => {
+    hi.style.opacity = '0.95';
+    hi.style.scale = '1';
+}, 500);
 
 appear = () => {
     half[0].style.opacity = '1';

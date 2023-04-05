@@ -202,6 +202,10 @@ let pause = false;
 let pauseButton = document.getElementById("pause");
 let userPause = false;
 
+setTimeout(() => {
+    pauseButton.style.opacity = 1;
+}, 1800);
+
 pauseButton.addEventListener("click", function() {
     if(pause) {
         pause = false;
