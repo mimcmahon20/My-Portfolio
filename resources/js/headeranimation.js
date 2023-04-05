@@ -3,7 +3,7 @@ const lookOut = document.querySelector('.lookOut');
 const half = document.querySelectorAll('.half');
 const mSecond = document.querySelector('.secondletter');
 const nav = document.querySelector('.nav');
-
+const nameContainer = document.querySelector('.nameContainer');
 
 
 const options = { 
@@ -13,6 +13,11 @@ const options = {
 };
 
 let active = false;
+
+setTimeout(() => {
+    nameContainer.style.opacity = '1';
+    nav.style.opacity = '1';
+}, 400);
 
 appear = () => {
     half[0].style.opacity = '1';
