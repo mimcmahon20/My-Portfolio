@@ -184,6 +184,29 @@ header h1 {
     background-size: cover;
 }
 
+.infodivider {
+    width: 100%;
+    height: 300px;
+    background: url(/resources/infodivider.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    position: absolute;
+    transform: translateY(-150px) scale(1.5) rotateZ(20deg);
+}
+
+
+.infodivider-flipped {
+    transform: translateY(-150px) scale(1.5) rotateZ(-20deg);
+    width: 100%;
+    height: 300px;
+    background: url(/resources/infodivider.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    position: absolute;
+}
+
 /* Info section*/
 .info {
     padding-top: 200px;
@@ -248,14 +271,16 @@ header h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) rotateZ(15deg) scale(1.3);
 }
+
 
 /* Projects section*/
 
 .projects {
     width: 92%;
     height: 100vh;
+    grid-template-columns: auto;
 }
 
 .projects-header {
@@ -302,6 +327,7 @@ header h1 {
     width: 100%;
     backface-visibility: hidden;
     text-align: center;
+    height: fit-content;
 }
 
 .rotate {
