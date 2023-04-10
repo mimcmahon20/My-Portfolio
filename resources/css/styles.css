@@ -326,6 +326,14 @@ header h1 {
     scale: 1.8;
 }
 
+.wireframe-media {
+    background: url("/resources/wireframe.png");
+    background-size: cover;
+    background-position: 20px center;
+    background-repeat: no-repeat;
+
+}
+
 .project-info {
     display: flex;
     flex-direction: column;
@@ -367,7 +375,11 @@ header h1 {
     background: url("/resources/wordpress.svg");
 }
 
-.htmlsvg, .csssvg, .jssvg, .wpsvg {
+.figmasvg {
+    background: url("/resources/figmasymbol.svg");
+}
+
+.htmlsvg, .csssvg, .jssvg, .wpsvg, .figmasvg {
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
@@ -670,7 +682,7 @@ header h1 {
         width: 35px;
         height: 35px;
     }
-    .htmlsvg, .csssvg, .jssvg, .wpsvg {
+    .htmlsvg, .csssvg, .jssvg, .wpsvg, .figmasvg {
         width: 25px;
         height: 25px;
     }
