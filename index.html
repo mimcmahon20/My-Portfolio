@@ -33,10 +33,10 @@
             </div>
 
 
-            <div class="nav test">
-                <a href="#info" class="nav-link"><h2>About</h2></a>
-                <a href="#projects" class="nav-link"><h2>Projects</h2></a>
-                <a href="#contact" class="nav-link"><h2>Contact</h2></a>
+            <div class="nav">
+                <a href="#info" class="nav-link"><h3>About</h3></a>
+                <a href="#projects" class="nav-link"><h3>Projects</h3></a>
+                <a href="#contact" class="nav-link"><h3>Contact</h3></a>
             </div>
         </header>
     
@@ -109,84 +109,44 @@
                     Work & Projects
                 </h1>
 
-                <div class="projects grid test">
-                    <div class="card-container">
-                        <div class="project">
-                            <div class="project-front project-text">
-                                <div class="rotate"></div>
-                                <h2 class="project-title">Appalachian Haven</h2>
-                                <div class="stack-container">
-                                    <div class="wpsvg"></div>
-                                    <div class="htmlsvg"></div>
-                                    <div class="csssvg"></div>
-                                </div>
-    
-                                <p class="project-description">Appalachian Haven is a health and wellness startup located in Blacksburg, VA. I started work as a website maintenance intern in October 2022, and was promoted to <strong>Website Development Team Lead</strong> in January 2023. We work out of Wordpress, however my knowledge on HTML, CSS, and Javascript has proven crucial. I have learned about <strong>Wordpress, SEO, Google Analytics, Ecommerce, and UI/UX</strong> through my work with Appalachian Haven.</p>
-                                <p class="project-description">Responsibilities included: Onboarding new interns, increasing mobile usability and experience, creating and maintaining weekly, monthly, and quarterly goals, using AI to help generate site content and increase traffic, user testing, emergency site maintenance, adding plugins, decreasing load time, and more.</p>
-                                <a href="http://appalachianhaven.com" target="_blank"><button class="buttons" style="margin: 30px;">Visit now!</button></a>
-                            </div>
-    
-                            <div class="project-back">
-                                <div class="rotate flipped"></div>
-                                <div class="project-media-group">
-                                    <a class="project-container project-image-desktop" href="http://appalachianhaven.com" target="_blank">
-                                        <div class="ah"></div>
-                                    </a>
-                                    <div class="project-image-mobile ah-mobile"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="card-container">
-                        <div class="project">
-
-                            <div class="project-front project-text">
-                                <div class="rotate"></div>
-                                <h2 class="project-title">Snake & Dijkstra</h2>
-                            <div class="stack-container">
-                                <div class="htmlsvg"></div>
-                                <div class="csssvg"></div>
-                                <div class="jssvg"></div>
-                            </div>
-                            <p class="project-description">Creating the game Snake was the first CS project I ever completed back in 2018. I wrote it using Java and GUI's specifically JFrames. It took me a few months to figure out all the bugs. After learning about dijkstra's algorithm in my Deterministic Operations Research class four years later, I was inspired to implement it into the game of Snake. I first created a visualization of the algorithm, using darkening red squares to indicate more tiles being searched before finding the goal. I then recreated the game snake using JS, and was confident merging the two would be easy!</p>
-                            <p class="project-description">After trial, error, debugging, and more debugging, I finally was able to get the algorithm implemented smoothly into the game. Currently, the snake will live until either it traps itself, or food spawns at a point the algorithm can't see. This is the version you saw above!</p>
-                            <p class="project-description" style="text-align: center; color: rgba(92, 91, 91, 0.863);"><em>*Video of original snake from highschool in Resume.</em></p>
-                            <div class="outboundlinks snakelinks">
-                                <a href="https://mimcmahon20.github.io/dijkstras-visualization/" target="_blank"><button class="snakelink buttons">Visualization</button></a>
-                                <a href="https://mimcmahon20.github.io/snake/" target="_blank"><button class="snakelink buttons">Snake</button></a>
-                                <a href="https://github.com/mimcmahon20/snake" target="_blank"><button class="snakelink buttons">Source Code</button></a>
-                            </div>
-                            </div>
-    
-                            <div class="project-back">
-                                <div class="rotate flipped"></div>
-                                <div class="project-media-group">
-                                    <div class="project-container dijkstra">
-                                        <video autoplay="true" loop="true" src="./resources/djvideo.mp4"></video>
-                                    </div>
-                                    <div class="project-container snake">
-                                        <video autoplay="true" loop="true" src="./resources/snakevideo.mp4"></video>
-                                    </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="card-container">
+                <div class="projects">
                     <div class="project">
-
-                        <div class="project-front project-text">
-                            
+                        <video class="project-media dj-media" autoplay="true" loop="true" src="./resources/djvideo.mp4"></video>
+                    </div>
+                    <div class="project project-info">
+                        <div class="project-title"><h2>Dijkstra</h2></div>
+                        <div class="stack-container">
+                            <div class="htmlsvg"></div>
+                            <div class="csssvg"></div>
+                            <div class="jssvg"></div>
                         </div>
-
-                        <div class="project-back">
-                            
+                        <div class="project-des"><p>I was inspired to make this visualization tool for Dijkstra's algorithm after learning about the proof in my deterministic operations research class my sophomore year. The pathfinding algorithm searches neighboring nodes, as shown in red, and finds the path bearing the least weight from the starting point to the goal. </p></div>
+                        <div class="project-links">
+                            <a class="project-button project-code" href="https://github.com/mimcmahon20/snake" target="_blank"></a>
+                            <a class="project-button project-go" href="https://mimcmahon20.github.io/snake/" target="_blank"></a>
                         </div>
                     </div>
-                </div> -->
+
+
+                    <div class="project project-info">
+                        <div class="project-title"><h2>Snake</h2></div>
+                        <div class="stack-container">
+                            <div class="htmlsvg"></div>
+                            <div class="csssvg"></div>
+                            <div class="jssvg"></div>
+                        </div>
+                        <div class="project-des"><p>The first independent project was recreating the game Snake in Java using JFrames and GUIs. Four years later, I returned to this humble idea, but wanted to implement Dijkstra's algorithm that I had recently learned about. </p></div>
+                        <div class="project-links">
+                            <a class="project-button project-code" href="https://github.com/mimcmahon20/dijkstras-visualization" target="_blank"></a>
+                            <a class="project-button project-go" href="https://mimcmahon20.github.io/dijkstras-visualization/" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <video class="project-media snake-media" autoplay="true" loop="true" src="./resources/snakevideo.mp4"></video>
+                    </div>
+
+            
+                </div>
 
 
                 <div class="dividerproject" style="transform: rotateZ(180deg) rotateY(180deg)"></div>
