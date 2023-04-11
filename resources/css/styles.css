@@ -1,14 +1,16 @@
 * {
-    --primary: #e0e0e0;
-    --secondary: #333333;
+
     --tertiary: hsl(0, 0%, 40%);
     --headersize: 48px;
-    --cta: #2f80ed;
-    --cta-hover: #1366d6;
+    --cta: #f2a826;
+    --cta-hover: #916517;
+    --primary: #c1d9fa;
+    --secondary: #0e2647;
+
 }
 
 body {
-    background-color: var(--primary);
+    background-color: var(#333333);
     font-family: "Helvetica Neue", Helvetica,Arial,sans-serif; 
     font-size: 12px;
     color: var(--secondary);
@@ -22,8 +24,7 @@ body {
 header {
     height: 60px;
     display: flex;
-    background: rgb(51,51,51);
-    background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 50%, rgba(66,66,66,1) 100%);
+    background: var(--secondary);
     align-items: center;
     position: sticky;
     top: 0;
@@ -69,6 +70,16 @@ header h1 {
 
 .nav-link:hover {
     color: var(--cta);
+}
+
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Set the line 2px below the link */
+  width: 10px; /* Make the line as wide as the link */
+  height: 2px;
+  background-color: var(--cta);
+  transition: all .3s linear;
 }
 
 .headshot {
@@ -126,7 +137,7 @@ header h1 {
 .others {
     position: sticky;
     top: 0;
-    background-color: var(--primary);
+    background-color:#fefefe;
 }
 
 .hi {
@@ -287,7 +298,6 @@ header h1 {
     padding: 60px 30px;
     margin-top: 0;
     margin-bottom: 0;
-    background-color: var(--primary);
     background-image: linear-gradient(to left, var(--primary), var(--secondary));
     background-size: calc(10vw * 8) 5px;
     background-repeat: no-repeat;
@@ -299,6 +309,7 @@ header h1 {
     width: 90%;
     padding: 5%;
     flex-wrap: wrap;
+    
 }
 
 .project {
@@ -308,6 +319,10 @@ header h1 {
     flex-grow: 1;
     display: flex;
     overflow: hidden;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px var(--secondary);
 }
 
 .project-media {
@@ -359,6 +374,17 @@ header h1 {
 }
 
 
+.project-info:nth-child(odd) .stack-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.project-info:nth-child(even) .stack-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .stack-container {
     display: flex;
@@ -366,10 +392,11 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    position: absolute;
-    right: 0;
     padding: 10px;
+    top: 0;
 }
+
+
 
 .htmlsvg {
     background: url("/resources/htmlsymbol.svg");
@@ -424,6 +451,7 @@ header h1 {
     height: 100px;
     background-color: var(--cta);
     border-radius: 50%;
+    transition: all 0.3s ease-in-out;
 }
 
 .project-button:hover {

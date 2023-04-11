@@ -29,12 +29,25 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     opacity: 0;
+    border-radius: 50%;
+}
+
+.pause:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 98%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
 }
 
 .box {
     height: var(--snakesize);
     width: var(--snakesize);
-    background-color: #333333;
+    background-color: #0e2647;
 }
 
 .row {
@@ -51,7 +64,7 @@
 }
 
 .food {
-    background-color: red;
+    background-color: #f2a826;
 }
 
 
