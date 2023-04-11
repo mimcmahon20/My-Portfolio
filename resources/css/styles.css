@@ -358,6 +358,7 @@ header h1 {
 }
 
 .project-title {
+    color: var(--cta);
     font-size: 3vw;
     margin: 0;
     padding: 0;
