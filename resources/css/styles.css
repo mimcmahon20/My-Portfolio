@@ -339,11 +339,21 @@ header h1 {
     scale: 1.8;
 }
 
-.wireframe-media {
-    background: url("/resources/Wireframe.png");
-    background-size: cover;
-    background-position: 0px center;
+.figma-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wireframe {
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .project-info {
@@ -505,6 +515,7 @@ input {
     font-size: 1.5vw;
     background-color: var(--secondary);
     color: var(--primary);
+    position: relative;
 }
 
 .input-container {
@@ -540,6 +551,7 @@ input::placeholder, textarea::placeholder
     color: #f6c267;
     font-size: 24px;
 }
+
 
 
 .outboundlinks {
@@ -668,8 +680,8 @@ input::placeholder, textarea::placeholder
 }
 
 .immersive {
-    background-color: #333333;
-    color: #e0e0e0;
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 .ah-info {

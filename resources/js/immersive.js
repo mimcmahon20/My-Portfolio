@@ -67,4 +67,4 @@ if (window.innerWidth <= 767) { // Check if screen width is less than or equal t
     //setInterval(init, 5000); // If so, run the init function every 5 seconds (i.e. every 5000 milliseconds
   } else {
     immersivecontainer.addEventListener('mouseenter', init); // Only add the event listener for desktop
-  }
+}
