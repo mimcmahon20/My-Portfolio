@@ -205,6 +205,7 @@ header h1 {
     background-size: cover;
     position: absolute;
     transform: translateY(-150px) scale(1.5) rotateZ(20deg);
+    overflow-x: hidden;
 }
 
 
@@ -222,6 +223,7 @@ header h1 {
 /* Info section*/
 .info {
     padding-top: 200px;
+    overflow-x: hidden;
 }
 
 .info h2 {
