@@ -196,6 +196,20 @@ header h1 {
     background-size: cover;
 }
 
+.info-header {
+    text-align: center;
+    font-size: 10vw;
+    padding: 60px 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: linear-gradient(to left, var(--primary), var(--secondary));
+    background-size: calc(10vw * 5) 5px;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+}
+
+
+
 .infodivider {
     width: 100%;
     height: 300px;
@@ -208,6 +222,9 @@ header h1 {
     overflow-x: hidden;
 }
 
+.infodivider-container {
+    position: absolute;
+}
 
 .infodivider-flipped {
     transform: translateY(-150px) scale(1.5) rotateZ(-20deg);
@@ -224,6 +241,7 @@ header h1 {
 .info {
     padding-top: 200px;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .info h2 {
@@ -249,6 +267,7 @@ header h1 {
 .info-svg-left {
     grid-column: 1 / span 4;
 }
+
 
 .computer,
 .team,
@@ -427,7 +446,11 @@ header h1 {
     background: url("/resources/figmasymbol.svg");
 }
 
-.htmlsvg, .csssvg, .jssvg, .wpsvg, .figmasvg {
+.reactsvg {
+    background: url("/resources/reactsymbol.svg");
+}
+
+.htmlsvg, .csssvg, .jssvg, .wpsvg, .figmasvg, .reactsvg {
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
@@ -765,7 +788,6 @@ input::placeholder, textarea::placeholder
     .card-container {
         grid-column: 1 / span 9 !important;
     }
-    
 }
 
 
@@ -790,7 +812,7 @@ input::placeholder, textarea::placeholder
         width: 35px;
         height: 35px;
     }
-    .htmlsvg, .csssvg, .jssvg, .wpsvg, .figmasvg {
+    .htmlsvg, .csssvg, .jssvg, .wpsvg, .figmasvg, .reactsvg {
         width: 25px;
         height: 25px;
     }
@@ -806,7 +828,10 @@ input::placeholder, textarea::placeholder
         width: 100%;
         font-size: 24px;
     }
-
+    .infodivider, .infodivider-flipped,
+    .dividerproject {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -840,6 +865,10 @@ input::placeholder, textarea::placeholder
     .project-des {
         display: none;
     }
+    .figma-container {
+        display: none;
+    }
+    
     input {
         font-size: 16px;
     }
@@ -853,7 +882,6 @@ input::placeholder, textarea::placeholder
         height: 600px;
     }
 }
-
 @media screen and (max-width: 400px) {
     .view {
         --size: 50px;
