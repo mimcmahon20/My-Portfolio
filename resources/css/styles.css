@@ -831,7 +831,7 @@ input::placeholder, textarea::placeholder
         width: 35px;
         height: 35px;
     }
-    .htmlsvg, .csssvg, .jssvg, .wpsvg, .figmasvg, .reactsvg {
+    .htmlsvg, .csssvg, .jssvg, .wpsvg, .figmasvg, .reactsvg, .spotifysvg {
         width: 25px;
         height: 25px;
     }
