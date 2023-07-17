@@ -118,7 +118,40 @@ header h1 {
 /* Legend / Introduction on load*/
 
 
+.legend-container {
+    position: relative;
+}
+
+.section-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section-overlay-bar {
+    height: 10vh;
+    width: 100%;
+}
+
+.bar {
+    position: fixed;
+    background-color: #fff;
+    height: 0%;
+    width: 100%;
+    z-index: 4;
+}
+
+
 .legend {
+    position: fixed;
+    top: 0;
+    z-index: 3;
     height: 90vh;
     height: 90svh;
     width: 100%;
@@ -128,9 +161,9 @@ header h1 {
     align-items: center;
     font-size: 5vw;
     transition: all .3s ease-in-out;
-    position: sticky;
     top: 60px;
     background-color: var(--secondary);
+    
 }
 
 .others {
@@ -303,7 +336,6 @@ header h1 {
 .dividerproject {
     width: 100%;
     aspect-ratio: 5/1;
-    background: url(/resources/wavedivider.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -311,6 +343,7 @@ header h1 {
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
 /* Projects section*/
 .projects-header {
     text-align: center;
@@ -322,7 +355,31 @@ header h1 {
     background-size: calc(10vw * 8) 5px;
     background-repeat: no-repeat;
     background-position: 50% 80%;
+    font-family: 'Mynerve', cursive;
 }
+
+.projects-header-container {
+    position: relative;
+}
+
+.projects-overlay-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bar-project-heading {
+    background-color: #fff;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
 
 .projects {
     display: flex;

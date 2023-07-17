@@ -19,6 +19,9 @@
     <title>Maguire McMahon</title>
     <link rel="stylesheet" href="/resources/css/styles.css">
     <link rel="stylesheet" href="/resources/css/snakestyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
 </head>
 <body>
         <header class="header">
@@ -41,20 +44,63 @@
         </header>
     
         <div class="">
-            <div class="legend">
-                <h1 class="hi">Hi!</h1>
-                <div class="game">
-                    <button class="pause" id="pause"></button>
+            <div class="legend-container">
+                <div class="legend">
+                    <h1 class="hi">Hi!</h1>
+                    <div class="game">
+                        <button class="pause" id="pause"></button>
+                    </div>
+                    <img src="resources/arrow.svg" alt="arrow" class="arrow">
                 </div>
-                <img src="resources/arrow.svg" alt="arrow" class="arrow">
+                <div class="section-overlay">
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                    <div class="section-overlay-bar">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div style="height: 150vh"></div>
             </div>
-    
-            <div class="others">
-                <div class="divider"></div>
+            
 
-                <h1 class="projects-header" id="projects">
-                    Work & Projects
-                </h1>
+
+            <div class="others">
+                <!-- <div class="divider"></div> -->
+                <div class="projects-header-container">
+                    <h1 class="projects-header" id="projects">
+                        Work & Projects
+                    </h1>
+                    <div class="projects-overlay-bar">
+                        <div class="bar-project-heading"></div>
+                    </div>
+                </div>
+
+                <div style="height: 25vh"></div>
 
                 <div class="projects">
                     
@@ -74,7 +120,9 @@
                         </div>
                     </div>
                     <div class="project">
-                        <video class="project-media jammming-media" src="./resources/jammmingvideo.mp4" autoplay loop controls muted></video>
+                        <video class="project-media jammming-media"  muted autoplay loop >
+                            <source src="/resources/jammmingvideo.mp4" type="video/mp4">
+                        </video>
                     </div>
 
 
@@ -115,12 +163,16 @@
                         </div>
                     </div>
                     <div class="project">
-                        <video class="project-media snake-media" src="./resources/snakevideo.mp4" autoplay loop controls></video>
+                        <video class="project-media snake-media"  muted autoplay loop>
+                            <source src="resources/snakevideo.mp4" type="video/mp4">
+                        </video>
                     </div>
 
                     
                     <div class="project">
-                        <video class="project-media dj-media" src="./resources/djvideo.mp4" autoplay loop controls></video>
+                        <video class="project-media dj-media" muted autoplay loop>
+                            <source src="resources/djvideo.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="project project-info">
                         <div class="project-title"><h2>Dijkstra</h2></div>
@@ -140,7 +192,9 @@
 
                 </div>
 
-                <div class="dividerproject" style="transform: rotateZ(-10deg) rotateX(180deg) translateY(-150px) scale(1.5); padding-bottom: 0px;"></div>
+                <div class="dividerproject" style=""></div>
+
+
 
                 <div class="info" id="info">
                     <div class="section">
@@ -150,10 +204,13 @@
                         <h2 class="info-text-left">I am a website developer with an interest in <span class="gradient-ui">UI/UX</span> and front-end engineering
                         </h2>
                         <div class="info-svg-right">
+
+                            <!-- <iframe overflow="hidden" width="400px" height="400px" src="https://editor.p5js.org/mimcmahon20/full/muUawY_5K"></iframe> -->
                             <img src="resources/computer.svg" alt="computer" class="computer">
                         </div>    
                     </div>
-                    <div class="infodivider"></div>
+
+                    
 
                     <div class="section grid immersive-container">
                         <div class="info-svg-left">
@@ -165,7 +222,7 @@
                         </h2>
                     </div>
                     
-                    <div class="infodivider-flipped"></div>
+                    
                     
                     
                     <div class="section grid">
@@ -185,7 +242,7 @@
                         </div>
                     </div>
 
-                    <div class="infodivider"></div>
+                    
         
                     <div class="section grid">
                         <div class="info-svg-left">
@@ -195,6 +252,8 @@
                     </div>
         
                 </div>
+
+
 
                 <div class="dividerproject"></div>
 
@@ -245,6 +304,8 @@
 <script src="resources/js/snakescript.js" type="module"></script>
 <script src="resources/js/slideIn.js"></script>
 <script src="resources/js/projectcards.js"></script>
+<script src="resources/js/infotransition.js"></script>
+<script src="resources/js/heroanimation.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XQY14FGLQB"></script>
 <script>
